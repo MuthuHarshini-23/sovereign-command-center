@@ -3203,7 +3203,7 @@ alert = Rf > <span class="num">0.00350</span>                  <span class="cmt"
       try {
         const ctrl = new AbortController();
         const tid  = setTimeout(() => ctrl.abort(), 8000);
-        const cl   = agentState.model === 'modelCardR1' ? 'deepseek-r1:8b' :
+        const cl   = agentState.model === 'modelCardR1' ? 'deepseek-r1:1.5b' :
                      agentState.model === 'modelCardVL'  ? 'qwen2.5:7b' : 'qwen2.5-coder:7b';
         const resp = await fetch('http://127.0.0.1:11434/api/generate', {
           method: 'POST',
